@@ -16,15 +16,12 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   image(imgC, 0, 0, 820, 1180);
   //create html elemnts: sliders
-  r = createSlider(0, 255, 0);
+  r = createSlider(0, 255, 255);
   r.position(20, 20);
-  r.addClass("mySliders");
   g = createSlider(0, 255, 0);
   g.position(20, 50);
-  g.addClass("mySliders");
   b = createSlider(0, 255, 0);
   b.position(20, 80);
-  b.addClass("mySliders");
   //create button. When pressed the function setKitty is activated
   kitty = createButton("Cat");
   kitty.size(75, 30);
@@ -54,8 +51,9 @@ function setup() {
   //set the position of the tip
   cx = 284;
   cy = 623;
-  fill("#f67f00");
-  tip = circle(cx, cy, 5);
+  noStroke();
+  fill("red");
+  tip = circle(cx, cy, 6);
 }
 
 function draw() {
@@ -82,7 +80,7 @@ function create() {
   const dx = map(rotationY, -90, 90, -1, 1);
   const dy = map(rotationX, -180, 180, -1, 1);
   fill(rValue, gValue, bValue);
-  tip = circle(cx, cy, 5);
+  tip = circle(cx, cy, 6);
   cx += dx * 2.5;
   cy += dy * 2.5;
   //puts a limit to its value
