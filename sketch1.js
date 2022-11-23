@@ -14,7 +14,8 @@ function preload() {
 function setup() {
   setShakeThreshold(20);
   createCanvas(windowWidth, windowHeight);
-  image(imgC, 0, 0, 820, 1180);
+  background("#f7f0eb");
+  image(imgC, 0, 0, 819, 1179);
   //create html elemnts: sliders
   r = createSlider(0, 255, 255);
   r.position(20, 20);
@@ -62,7 +63,6 @@ function draw() {
 
 //create the function create o it can be activated also at different moments
 function create() {
-  background("#f7f0eb");
   noStroke();
   fill("#dedede");
   rect(0, 0, 220, 185);
