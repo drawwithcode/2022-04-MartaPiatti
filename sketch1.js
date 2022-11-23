@@ -15,7 +15,7 @@ function setup() {
   setShakeThreshold(20);
   createCanvas(windowWidth, windowHeight);
   background("#f7f0eb");
-  image(imgC, 0, 0, 819, 1179);
+  image(imgC, 0, 0, width, width * 2);
   //create html elemnts: sliders
   r = createSlider(0, 255, 255);
   r.position(20, 20);
@@ -50,11 +50,10 @@ function setup() {
   fish.style("border", "none");
   fish.style("border-radius", "4px");
   //set the position of the tip
-  cx = 284;
-  cy = 623;
+  cx = 129;
+  cy = 443;
   noStroke();
-  fill("red");
-  tip = circle(cx, cy, 6);
+  tip = circle(cx, cy, 5);
 }
 
 function draw() {
@@ -81,7 +80,7 @@ function create() {
   const dx = map(rotationY, -90, 90, -1, 1);
   const dy = map(rotationX, -180, 180, -1, 1);
   fill(rValue, gValue, bValue);
-  tip = circle(cx, cy, 6);
+  tip = circle(cx, cy, 5);
   cx += dx * 2.5;
   cy += dy * 2.5;
   //puts a limit to its value
@@ -92,9 +91,9 @@ function create() {
 //when cat is pressed to change drawing
 function setKitty() {
   background("#f7f0eb");
-  image(imgC, 0, 0, width, height);
-  cx = 284;
-  cy = 623;
+  image(imgC, 0, 0, width, width * 2);
+  cx = 129;
+  cy = 443;
   i = 0;
   create();
   kitty.style("background-color", "#854008");
@@ -104,9 +103,9 @@ function setKitty() {
 //when fish is pressed to change drawing
 function setFish() {
   background("#f7f0eb");
-  image(imgF, 0, 0, width, height);
-  cx = 166;
-  cy = 589;
+  image(imgF, 0, 0, width, width * 2);
+  cx = 87;
+  cy = 424;
   i = 1;
   create();
   fish.style("background-color", "#854008");

@@ -13,19 +13,22 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background("#ffbf6e");
-  textSize(60);
+  textSize(70);
   fill("white");
   textFont(sansita);
   textAlign(CENTER);
-  text("CONNECT THE DOTS", windowWidth / 2, 485);
+  text("CONNECT", windowWidth / 2, 235);
+  text("THE DOTS", windowWidth / 2, 305);
   textSize(30);
   fill("#854008");
   textFont(robotoRegular);
-  text("Use the cursors to change the tip color", windowWidth / 2, 535);
-  text("Tilt your iPad to draw and shake it to restart", windowWidth / 2, 575);
+  text("Use the sliders", windowWidth / 2, 386);
+  text("to change the tip color", windowWidth / 2, 426);
+  text("Tilt your phone to draw", windowWidth / 2, 466);
+  text("shake it to restart", windowWidth / 2, 506);
   let enter = createButton("START DRAWING");
   enter.size(320, 50);
-  enter.position(250, 645);
+  enter.position(windowWidth / 2 - 160, 616);
   enter.mousePressed(changePage);
   enter.style("font-family", robotoBold);
   enter.style("background-color", "#f67f00");
