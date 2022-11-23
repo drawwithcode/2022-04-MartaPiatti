@@ -62,6 +62,7 @@ function draw() {
 
 //create the function create o it can be activated also at different moments
 function create() {
+  background("#f7f0eb");
   noStroke();
   fill("#dedede");
   rect(0, 0, 220, 185);
@@ -90,6 +91,7 @@ function create() {
 
 //when cat is pressed to change drawing
 function setKitty() {
+  background("#f7f0eb");
   image(imgC, 0, 0, width, height);
   cx = 284;
   cy = 623;
@@ -101,6 +103,7 @@ function setKitty() {
 
 //when fish is pressed to change drawing
 function setFish() {
+  background("#f7f0eb");
   image(imgF, 0, 0, width, height);
   cx = 166;
   cy = 589;
